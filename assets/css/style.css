@@ -1,0 +1,43 @@
+body {
+    margin: 20px;
+    background: url("../images/furley_bg.png");
+}
+
+.pre-login, .post-login, .pending-login, .selections, .pending-selection, .selection-made, .selection-reveal, .stats, .chat-row {
+    display: none;
+}
+
+form[role=login] {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.selections {
+    margin: 0 auto;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+#chat-log {
+    height: 200px;
+    overflow: scroll;
+}
+
+#chat-log li {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.current-user {
+    color: red;
+}
+
+.other-user {
+    color: blue;
+}
+
+.system {
+    color: grey;
+}

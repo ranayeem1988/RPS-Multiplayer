@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiplayer Rock Paper Scissors</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="jumbotron">
+            <h1>Rock | Paper | Scissors</h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 pre-connection">
+                Connecting...
+            </div>
+            <div class="col-xs-12 pre-login">
+                <form role="login">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="player-name" placeholder="Enter your name to start...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" id="login" type="submit">Login</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 post-login">
+                <h2>Hi,
+                    <span id="player-name-display"></span>! You are player
+                    <span id="player-number"></span>.
+                </h2>
+            </div>
+            <div class="col-xs-12 pending-login">
+                There are already 2 players playing, you can play when one player quits.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 player">
+                <h3 id="player-1">Waiting for Player 1</h3>
+                <p class="stats p1-stats">
+                    <strong>Wins:</strong>
+                    <span id="p1-wins">0</span>
+                    <strong>Losses:</strong>
+                    <span id="p1-losses"></span>
+                </p>
+                <p class="selections p1-selections">
+                    <button id="Rock" data-player="1" class="btn btn-default selection">Rock</button>
+                    <button id="Paper" data-player="1" class="btn btn-default selection">Paper</button>
+                    <button id="Scissors" data-player="1" class="btn btn-default selection">Scissors</button>
+                </p>
+                <p class="pending-selection p1-pending-selection">
+                    Pending Selection
+                </p>
+                <p class="selection-made p1-selection-made">
+                    Selection Made.
+                </p>
+                <p class="selection-reveal p1-selection-reveal">
+                </p>
+            </div>
+            <div class="col-xs-4">
+                <h3 id="feedback"></h3>
+            </div>
+            <div class="col-xs-4 player">
+                <h3 id="player-2">Waiting for Player 2</h3>
+                <p class="stats p2-stats">
+                    <strong>Wins:</strong>
+                    <span id="p2-wins">0</span>
+                    <strong>Losses:</strong>
+                    <span id="p2-losses"></span>
+                </p>
+                <p class="selections p2-selections">
+                    <button id="Rock" data-player="2" class="btn btn-default selection">Rock</button>
+                    <button id="Paper" data-player="2" class="btn btn-default selection">Paper</button>
+                    <button id="Scissors" data-player="2" class="btn btn-default selection">Scissors</button>
+                </p>
+                <p class="pending-selection p2-pending-selection">
+                    Pending Selection
+                </p>
+                <p class="selection-made p2-selection-made">
+                    Selection Made.
+                </p>
+                <p class="selection-reveal p2-selection-reveal">
+
+                </p>
+            </div>
+        </div>
+        <div class="row post-login">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-left">Chat</h3>
+                    </div>
+                    <ul id="chat-log" class="list-unstyled text-left">
+                    </ul>
+                    <form role="chat" class="panel-footer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="chat">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" id="send-chat" type="submit">Send</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
